@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real time Chat</title>
+  <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+  <script src ="js/clinet.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <img class="logo" src="chat.png" alt="">
+  </nav>
+  <div class="container">
+    <div class="message right">riya: hey how are you</div>
+    <div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div><div class="message right">riya: hey how are you</div>
+    <div class="message left">puja : im fine</div>
+     <div class="message left">puja : im fine</div> <div class="message left">puja : im fine</div> <div class="message left">puja : im fine</div> <div class="message left">puja : im fine</div>
+       <div class="message left">puja : im fine</div> <div class="message left">puja : im fine</div> <div class="message left">puja : im fine</div> <div class="message left">puja : im fine</div> <div class="message left">puja : im fine</div>
+  </div>
+  <div class="send">
+    <form action ="#" id="send-container">
+      <input type="text" name="messageInp" id="messageInp" placeholder="Type a message">
+      <button clss="btn" type="submit" id="sendBtn">Send</button>
+    </form>
+  </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Realtime Chat App</title>
+    <script defer src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script defer src="client.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center p-6">
+    <h1 class="text-3xl font-bold mb-4">💬 Realtime Chat</h1>
+
+    <div class="flex w-full max-w-4xl">
+        <!-- Users List -->
+        <div class="w-1/4 bg-gray-800 rounded-lg p-3 mr-3">
+            <h2 class="font-semibold mb-2">Online Users</h2>
+            <ul id="users" class="space-y-1 text-sm text-gray-300"></ul>
+        </div>
+
+        <!-- Chat Box -->
+        <div class="flex-1 bg-gray-800 rounded-lg p-4 flex flex-col">
+            <div id="container" class="flex-1 overflow-y-auto mb-3"></div>
+            <div id="typing" class="text-sm text-gray-400 mb-2"></div>
+            <form id="send-container" class="flex">
+                <input id="messageInp" type="text" placeholder="Type a message..."
+                       class="flex-1 bg-gray-700 rounded-l-lg px-3 py-2 outline-none" />
+                <button class="bg-blue-500 px-4 py-2 rounded-r-lg hover:bg-blue-600">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
